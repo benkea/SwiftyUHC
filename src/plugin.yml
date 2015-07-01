@@ -1,0 +1,22 @@
+name: SwiftyUHC
+main: me.benkea.UHCMain
+version: 1.0
+author: WingedMLGPro
+
+commands:
+    ForceStart:
+        usage: /<command>
+    UHCTest:
+        usage: /<command>
+    revive:
+        usage: /<command>
+    uhcinfo:
+        usage: /<command>
+    freezetimer:
+        usage: /<command>
+    spectest:
+        usage: /<command>
+    setmode:
+        usage: /<command>
+    dmatch:
+        usage: /<command>

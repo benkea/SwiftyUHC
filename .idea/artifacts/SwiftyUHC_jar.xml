@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="SwiftyUHC:jar">
+    <output-path>$PROJECT_DIR$/../../Java</output-path>
+    <root id="archive" name="SwiftyUHC.jar">
+      <element id="module-output" name="SwiftySoloUHC" />
+    </root>
+  </artifact>
+</component>
