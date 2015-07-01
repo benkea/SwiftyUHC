@@ -26,7 +26,7 @@ import java.util.Random;
  */
 public class UHCMain extends JavaPlugin {
 
-    public static String UHCTag = "§6§lSwi§e§lfty §6§lU§e§lH§6§lC §e§l>§6§l> §b"; //TEST WITH GITHUB
+    public static String UHCTag = "§6§lSwi§e§lfty §6§lU§e§lH§6§lC §e§l>§6§l> §b";
     public static String Error = "§c§l/§4§l/ §6";
     public static String CantFindPlayer = Error+"Sorry, but we could not find the player ";
     public static String NoCONSOLE = Error+"Sorry, But the Console can't run this command!";
