@@ -240,7 +240,7 @@ public class UtilListeners implements Listener {
     public void onCompassTracker(PlayerMoveEvent e){
         Player p = e.getPlayer();
         if (p.getItemInHand().getType().equals(Material.COMPASS)){
-            Bukkit.getScheduler().runTask(UHCMain.getInstance(), new TrackerTask(p));
+            new TrackerTask(p).runTaskTimer(UHCMain.getInstance(), 0L, 20L);
         }
     }
 }
