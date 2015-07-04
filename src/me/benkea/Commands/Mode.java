@@ -27,7 +27,7 @@ public class Mode implements CommandExecutor {
         if (cmd.getName().equalsIgnoreCase("setmode")){
             if (args.length==0){
                 p.sendMessage(UHCMain.Error+"Usage: /setmode <Mode>");
-                p.sendMessage(UHCMain.Arrows+"§bModes§7: §aFFA, SPEED, CUTCLEAN");
+                p.sendMessage(UHCMain.Arrows+"§bModes§7: §aFFA, SPEED");
                 return true;
             }
             String mode = args[0];
@@ -41,14 +41,9 @@ public class Mode implements CommandExecutor {
                 p.sendMessage(UHCMain.UHCTag+"You set the Mode to SPEED");
                 return true;
             }
-            if (mode.equalsIgnoreCase("CUTCLEAN")){
-                UHCMain.setMode(Modes.CUTCLEAN);
-                p.sendMessage(UHCMain.UHCTag+"You set the Mode to CUTCLEAN");
-                return true;
-            }
             else if (!mode.equalsIgnoreCase("CUTCLEAN") && !mode.equalsIgnoreCase("SPEED") && !mode.equalsIgnoreCase("FFA")) {
                 p.sendMessage(UHCMain.Error+"Usage: /setmode <Mode>");
-                p.sendMessage(UHCMain.Arrows+"§bModes§7: §aFFA, SPEED, CUTCLEAN");
+                p.sendMessage(UHCMain.Arrows+"§bModes§7: §aFFA, SPEED");
                 return true;
             }
         }

@@ -40,7 +40,7 @@ public class joinListener implements Listener {
                 }
                 p.sendPluginMessage(UHCMain.getInstance(), "BungeeCord", b.toByteArray());
             }
-            if (!(UHCMain.getState() == GameState.LOBBY)) {
+            if (UHCMain.getState() != GameState.LOBBY) {
                 p.teleport(Bukkit.getWorld("lobby").getSpawnLocation());
                 setSpectator.setSpectator(p);
                 p.sendMessage(UHCMain.UHCTag + "You are now a Spectator!");

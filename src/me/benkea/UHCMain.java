@@ -122,6 +122,7 @@ public class UHCMain extends JavaPlugin {
         regCmd();
 
         state = GameState.STARTING;
+        mode = Modes.FFA;
 
         Bukkit.getServer().getScheduler().runTaskTimer(this, new TimeManager(), 20L, 20L);
 

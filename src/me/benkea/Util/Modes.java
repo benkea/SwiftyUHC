@@ -11,6 +11,6 @@ package me.benkea.Util;
  */
 public enum Modes {
 
-    CUTCLEAN, FFA, SPEED;
+    FFA, SPEED;
 
 }
