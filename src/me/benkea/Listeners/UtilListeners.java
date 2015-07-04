@@ -5,6 +5,7 @@ import me.benkea.Commands.Revive;
 import me.benkea.UHCMain;
 import me.benkea.Util.GameState;
 import me.benkea.Util.Scoreboard;
+import me.benkea.Util.TrackerTask;
 import me.benkea.Util.setSpectator;
 import me.dylzqn.PlayerAPI.SwiftyPlayer;
 import me.dylzqn.Utils.SwiftyTeams;
@@ -233,6 +234,13 @@ public class UtilListeners implements Listener {
                 p.teleport(Bukkit.getWorld("lobby").getSpawnLocation());
                 p.sendMessage(UHCMain.Error+"Don't go too far down!");
             }
+        }
+    }
+    @EventHandler
+    public void onCompassTracker(PlayerMoveEvent e){
+        Player p = e.getPlayer();
+        if (p.getItemInHand().getType().equals(Material.COMPASS)){
+            Bukkit.getScheduler().runTask(UHCMain.getInstance(), new TrackerTask(p));
         }
     }
 }
