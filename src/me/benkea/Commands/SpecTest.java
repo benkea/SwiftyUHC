@@ -1,6 +1,6 @@
 package me.benkea.Commands;
 
-import me.benkea.Util.setSpectator;
+import me.benkea.Util.Spec;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -22,7 +22,7 @@ public class SpecTest implements CommandExecutor {
         Player p = (Player)sender;
 
         if (cmd.getName().equalsIgnoreCase("spectest")){
-            setSpectator.setSpectator(p);
+            Spec.setSpectator(p);
             p.sendMessage("You are now testing being a spectator!");
         }
         return true;

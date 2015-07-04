@@ -4,7 +4,7 @@ import me.benkea.UHCMain;
 import me.benkea.Util.Actionbar;
 import me.benkea.Util.GameState;
 import me.benkea.Util.Scoreboard;
-import me.benkea.Util.setSpectator;
+import me.benkea.Util.Spec;
 import me.dylzqn.PlayerAPI.SwiftyPlayer;
 import me.dylzqn.Utils.SwiftyTeams;
 import org.bukkit.*;
@@ -42,7 +42,7 @@ public class joinListener implements Listener {
             }
             if (UHCMain.getState() != GameState.LOBBY) {
                 p.teleport(Bukkit.getWorld("lobby").getSpawnLocation());
-                setSpectator.setSpectator(p);
+                Spec.setSpectator(p);
                 p.sendMessage(UHCMain.UHCTag + "You are now a Spectator!");
             }
             if (UHCMain.getState() == GameState.LOBBY || UHCMain.getState() == GameState.STARTING) {

@@ -37,7 +37,7 @@ import java.util.List;
  * © This project SwiftyUHC was created by 35047
  * © at 29/06/15 at 1:43 PM
  */
-public class setSpectator implements Listener {
+public class Spec implements Listener {
 
     public static void setSpectator(Player p){
         for (Player all : Bukkit.getOnlinePlayers()){

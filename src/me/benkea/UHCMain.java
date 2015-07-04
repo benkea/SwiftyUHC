@@ -5,20 +5,16 @@ import me.benkea.Listeners.*;
 import me.benkea.Util.GameState;
 import me.benkea.Util.Modes;
 import me.benkea.Util.TimeManager;
-import me.benkea.Util.setSpectator;
+import me.benkea.Util.Spec;
 import me.dylzqn.PlayerAPI.SwiftyPlayer;
-import me.dylzqn.Utils.Configs.TeamConfig;
 import me.dylzqn.Utils.SwiftyTeams;
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
-import org.bukkit.block.Block;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.io.File;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Random;
 
 /**
@@ -95,7 +91,7 @@ public class UHCMain extends JavaPlugin {
         pm.registerEvents(new ChatEvent(), this);
         pm.registerEvents(new CommandHandle(), this);
         pm.registerEvents(new TogglesEvents(), this);
-        pm.registerEvents(new setSpectator(), this);
+        pm.registerEvents(new Spec(), this);
     }
 
     public void regCmd(){

@@ -4,17 +4,12 @@ import me.WingedMLGPro.API.StatsAPI;
 import me.benkea.Commands.Revive;
 import me.benkea.UHCMain;
 import me.benkea.Util.GameState;
-import me.benkea.Util.Scoreboard;
 import me.benkea.Util.TrackerTask;
-import me.benkea.Util.setSpectator;
+import me.benkea.Util.Spec;
 import me.dylzqn.PlayerAPI.SwiftyPlayer;
 import me.dylzqn.Utils.SwiftyTeams;
-import net.md_5.bungee.api.chat.TextComponent;
 import org.bukkit.Bukkit;
-import org.bukkit.GameMode;
-import org.bukkit.Location;
 import org.bukkit.Material;
-import org.bukkit.entity.Entity;
 import org.bukkit.entity.Ghast;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -26,18 +21,9 @@ import org.bukkit.event.block.BlockPlaceEvent;
 import org.bukkit.event.entity.*;
 import org.bukkit.event.player.*;
 import org.bukkit.inventory.ItemStack;
-import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.inventory.meta.SkullMeta;
-import org.bukkit.potion.Potion;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
-import org.bukkit.potion.PotionType;
-
-import java.io.ByteArrayOutputStream;
-import java.io.DataOutputStream;
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Created by 35047 on 8/04/15.
@@ -110,7 +96,7 @@ public class UtilListeners implements Listener {
             p.getWorld().dropItemNaturally(p.getLocation(), head);
         }
         p.teleport(Bukkit.getWorld("lobby").getSpawnLocation());
-        setSpectator.setSpectator(p);
+        Spec.setSpectator(p);
         p.sendMessage(UHCMain.UHCTag + "You are now a spectator!");
         StatsAPI.addUHCDeaths(1, p);
         StatsAPI.addUHCGamesPlayed(1, p);
