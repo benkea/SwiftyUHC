@@ -49,7 +49,8 @@ public class TrackerTask extends BukkitRunnable {
             msg = "§6§l>§e§l> §bTarget§7: §a"+nearest.getName()+" §7| §bDistance§7: §a"+(int)nearest.getLocation().distance(p.getLocation());
         }
 
-        MiscellaneousManager.sendActionBar(p, msg);
+        p.getItemInHand().getItemMeta().setDisplayName(msg);
+        p.getItemInHand().setItemMeta(p.getItemInHand().getItemMeta());
         try {
             p.setCompassTarget(nearest != null ? nearest.getLocation() : null);
         } catch (NullPointerException ignore){
